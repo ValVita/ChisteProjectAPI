@@ -1,0 +1,6 @@
+@ChisteFetcherAPI_HostAddress = http://localhost:5078
+
+GET {{ChisteFetcherAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37216.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChisteFetcherAPI", "ChisteFetcherAPI\ChisteFetcherAPI.csproj", "{3E7F1AD4-ED34-4ACF-9299-3B753532C52D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChisteConsumerAPI", "ChisteConsumerAPI\ChisteConsumerAPI.csproj", "{03EEB203-AFA8-444B-B195-1992A1468C60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E7F1AD4-ED34-4ACF-9299-3B753532C52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7F1AD4-ED34-4ACF-9299-3B753532C52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7F1AD4-ED34-4ACF-9299-3B753532C52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7F1AD4-ED34-4ACF-9299-3B753532C52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03EEB203-AFA8-444B-B195-1992A1468C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03EEB203-AFA8-444B-B195-1992A1468C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03EEB203-AFA8-444B-B195-1992A1468C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03EEB203-AFA8-444B-B195-1992A1468C60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98C728C6-25A8-459D-B0C7-61E87E8B2249}
+	EndGlobalSection
+EndGlobal
