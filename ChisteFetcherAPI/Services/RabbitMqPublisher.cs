@@ -12,7 +12,7 @@ namespace ChisteFetcherAPI.Services
 
         public RabbitMqPublisher()
         {
-            var factory = new ConnectionFactory { HostName = "localhost" };
+            var factory = new ConnectionFactory { HostName = "localhost", VirtualHost = "chistes",UserName = "valentina", Password = "valentina" };
             _connection = factory.CreateConnectionAsync().GetAwaiter().GetResult();
             _channel = _connection.CreateChannelAsync().GetAwaiter().GetResult();
             _channel.QueueDeclareAsync(queue: _queueName, durable: true, exclusive: false, autoDelete: false).Wait();
