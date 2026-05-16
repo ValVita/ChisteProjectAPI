@@ -31,7 +31,7 @@ namespace ChisteConsumerAPI.Services
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                var joke = JsonSerializer.Deserialize<ChisteModel>(message);
+                var joke = JsonSerializer.Deserialize<ChisteModelC>(message);
 
                 if (joke != null)
                 {
@@ -39,7 +39,7 @@ namespace ChisteConsumerAPI.Services
                     var dbContext = scope.ServiceProvider.GetRequiredService<ChisteDbContext>();
 
                     var jokeEntity = new ChisteModelConsumer { ExternalId = joke.Id, Content = joke.Value };
-                    dbContext.Jokes.Add(jokeEntity);
+                    dbContext.CHISTEDB.Add(jokeEntity);
                     await dbContext.SaveChangesAsync();
                 }
                 await _channel.BasicAckAsync(ea.DeliveryTag, false);
