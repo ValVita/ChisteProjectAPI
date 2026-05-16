@@ -15,7 +15,7 @@ namespace ChisteConsumerAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllJokes()
         {
-            var jokes = await _context.Jokes.ToListAsync();
+            var jokes = await _context.CHISTEDB.ToListAsync();
             return Ok(jokes);
         }
     }

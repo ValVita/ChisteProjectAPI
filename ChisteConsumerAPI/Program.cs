@@ -1,4 +1,5 @@
 using ChisteConsumerAPI.Data;
+using ChisteConsumerAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ChisteDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddHostedService<RabbitMqConsumerService>();
 
 var app = builder.Build();
 
