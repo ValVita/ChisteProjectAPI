@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<IChisteService, ChisteService>();
-builder.Services.AddSingleton<RabbitMqPublisher>();
+builder.Services.AddSingleton<IRabbitMqPublisher, RabbitMqPublisher>();
 
 var app = builder.Build();
 

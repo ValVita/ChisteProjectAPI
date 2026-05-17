@@ -1,23 +1,21 @@
-﻿using System.Text;
-using System.Text.Json;
-using ChisteConsumerAPI.Data;
-using ChisteConsumerAPI.Models;
-using ChisteFetcherAPI.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
 namespace ChisteConsumerAPI.Services
 {
+    [ExcludeFromCodeCoverage]
     public class RabbitMqConsumerService : BackgroundService
     {
         private readonly IConnection _connection;
         private readonly IChannel _channel;
-        private readonly IServiceProvider _serviceProvider;
+        private readonly IJokePersistenceService _jokePersistenceService;
         private readonly string _queueName = "jokes_queue";
 
-        public RabbitMqConsumerService(IServiceProvider serviceProvider)
+        public RabbitMqConsumerService(IJokePersistenceService jokePersistenceService)
         {
-            _serviceProvider = serviceProvider;
+            _jokePersistenceService = jokePersistenceService;
             var factory = new ConnectionFactory { HostName = "localhost", VirtualHost = "chistes", UserName = "valentina", Password = "valentina"};
             _connection = factory.CreateConnectionAsync().GetAwaiter().GetResult();
             _channel = _connection.CreateChannelAsync().GetAwaiter().GetResult();
@@ -31,17 +29,7 @@ namespace ChisteConsumerAPI.Services
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                var joke = JsonSerializer.Deserialize<ChisteModelC>(message);
-
-                if (joke != null)
-                {
-                    using var scope = _serviceProvider.CreateScope();
-                    var dbContext = scope.ServiceProvider.GetRequiredService<ChisteDbContext>();
-
-                    var jokeEntity = new ChisteModelConsumer { ExternalId = joke.Id, Content = joke.Value };
-                    dbContext.CHISTEDB.Add(jokeEntity);
-                    await dbContext.SaveChangesAsync();
-                }
+                await _jokePersistenceService.TrySaveJokeFromJsonAsync(message);
                 await _channel.BasicAckAsync(ea.DeliveryTag, false);
             };
 

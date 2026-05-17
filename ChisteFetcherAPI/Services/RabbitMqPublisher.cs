@@ -1,10 +1,12 @@
-﻿using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Text;
 using System.Text.Json;
 using ChisteFetcherAPI.Models;
 using RabbitMQ.Client;
 namespace ChisteFetcherAPI.Services
 {
-    public class RabbitMqPublisher : IAsyncDisposable
+    [ExcludeFromCodeCoverage]
+    public class RabbitMqPublisher : IRabbitMqPublisher, IAsyncDisposable
      {
         private readonly IConnection _connection;
         private readonly IChannel _channel;

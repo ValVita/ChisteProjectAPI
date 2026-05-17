@@ -8,9 +8,9 @@ namespace ChisteFetcherAPI.Controllers
     public class JokesController : ControllerBase
     {
         private readonly IChisteService _ChisteService;
-        private readonly RabbitMqPublisher _rabbitMqPublisher;
+        private readonly IRabbitMqPublisher _rabbitMqPublisher;
 
-        public JokesController(IChisteService jokeService, RabbitMqPublisher rabbitMqPublisher)
+        public JokesController(IChisteService jokeService, IRabbitMqPublisher rabbitMqPublisher)
         {
             _ChisteService = jokeService;
             _rabbitMqPublisher = rabbitMqPublisher;
