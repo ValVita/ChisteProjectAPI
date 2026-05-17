@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChisteFetcherAPI", "ChisteF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChisteConsumerAPI", "ChisteConsumerAPI\ChisteConsumerAPI.csproj", "{03EEB203-AFA8-444B-B195-1992A1468C60}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "tuappweb.client", "TuAppWeb\tuappweb.client\tuappweb.client.esproj", "{C4CD100E-5FCE-D212-1CE9-1661E830E171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuAppWeb.Server", "TuAppWeb\TuAppWeb.Server\TuAppWeb.Server.csproj", "{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,16 @@ Global
 		{03EEB203-AFA8-444B-B195-1992A1468C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03EEB203-AFA8-444B-B195-1992A1468C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03EEB203-AFA8-444B-B195-1992A1468C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4CD100E-5FCE-D212-1CE9-1661E830E171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4CD100E-5FCE-D212-1CE9-1661E830E171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4CD100E-5FCE-D212-1CE9-1661E830E171}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C4CD100E-5FCE-D212-1CE9-1661E830E171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4CD100E-5FCE-D212-1CE9-1661E830E171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4CD100E-5FCE-D212-1CE9-1661E830E171}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
