@@ -11,6 +11,10 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "tuappweb.client", "TuAppWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuAppWeb.Server", "TuAppWeb\TuAppWeb.Server\TuAppWeb.Server.csproj", "{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChisteFetcherAPI.Tests", "ChisteFetcherAPI.Tests\ChisteFetcherAPI.Tests.csproj", "{808599C2-A6FA-4E7B-862F-DEC0BB247D3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChisteConsumerAPI.Tests", "ChisteConsumerAPI.Tests\ChisteConsumerAPI.Tests.csproj", "{5A9E60F0-EAD8-5F99-3939-484D2B028A92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAB7A667-D492-407F-8D2F-DE2B9CAB13E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808599C2-A6FA-4E7B-862F-DEC0BB247D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808599C2-A6FA-4E7B-862F-DEC0BB247D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808599C2-A6FA-4E7B-862F-DEC0BB247D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808599C2-A6FA-4E7B-862F-DEC0BB247D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A9E60F0-EAD8-5F99-3939-484D2B028A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9E60F0-EAD8-5F99-3939-484D2B028A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A9E60F0-EAD8-5F99-3939-484D2B028A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A9E60F0-EAD8-5F99-3939-484D2B028A92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
